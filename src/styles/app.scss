@@ -496,20 +496,28 @@ p{
 
     .spoil{
         margin-top: 16px;
-    margin-bottom: 16px;
-    padding: 16px;
+        margin-bottom: 16px;
+        padding: 16px;
+        cursor: pointer;
+        position: relative;
+        padding-left: 30px;
+        
+    }
+    summary::before {
+        content: url(../assets/images/logo-quest.svg);
+        margin-right: 10px;
+    
+    }
+     
+     details[open] summary:before {
+        content: url(../assets/images/logo-quest-ouvert.svg);
+        margin-right: 10px;
     }
 
     .p--bold{
         font-size: 25px;
     }
-    .p--bold::before{
-        content: " ";
-        background-image: url(../assets/images/logo-quest.svg);
-        background-repeat: no-repeat;
-        width: 100%;
-        background-size: cover;
-    }
+
 }
 
 /*IMAGE*/
