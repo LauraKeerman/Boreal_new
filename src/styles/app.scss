@@ -477,7 +477,13 @@ p{
 
 .mainContainer__sectionproduit{
     margin-top: 64px;
+
 }
+
+.mainContainer__sectionsable{
+    margin-top: 79px;
+}
+
 
 
 
@@ -613,6 +619,29 @@ p{
                 margin-left: 32px;
                 margin-right: 32px;
             }
+        }
+    }
+
+    .mainContainer__sectionproduit{
+        display: flex;
+        align-items: center;
+        margin-top: 128px;
+        
+
+        .sectionproduit{
+            padding-left: 128px;
+        }
+    
+    }
+    
+    .mainContainer__sectionsable{
+        display: flex;
+        align-items: center;
+        margin-top: 128px;
+        margin-bottom: 128px;
+
+        .sectionsable{
+            padding-left: 128px;
         }
     }
 
