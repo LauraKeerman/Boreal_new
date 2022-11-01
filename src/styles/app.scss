@@ -484,7 +484,39 @@ p{
     margin-top: 79px;
 }
 
+.mainContainer__sectioncreateurs{
+    margin-top: 64px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
+.mainContainer__sectionfaq{
+    margin-top: 64px; 
+
+    .spoil{
+        margin-top: 16px;
+    margin-bottom: 16px;
+    padding: 16px;
+    }
+
+    .p--bold{
+        font-size: 25px;
+    }
+    .p--bold::before{
+        content: " ";
+        background-image: url(../assets/images/logo-quest.svg);
+        background-repeat: no-repeat;
+        width: 100%;
+        background-size: cover;
+    }
+}
+
+/*IMAGE*/
+.image--createurs{
+    width: 300px;
+    height: 300px;
+}
 
 
 /*tablette*/
