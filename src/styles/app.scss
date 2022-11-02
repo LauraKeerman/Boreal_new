@@ -2,7 +2,7 @@
 @import 'utils/variables';
 @import 'components/type';
 
-/*reset*/
+/*RESET*/
 *{
     margin: 0;
     padding: 0;
@@ -19,7 +19,7 @@
     }
 }
 
-/*variables*/
+/*VARIABLES*/
 :root{
     --c-bg: #fff;
     --c-lightBlue: #bedfff;
@@ -31,7 +31,7 @@
 }
 
 
-/*scroll bar*/
+/*SCROLL BAR*/
 ::-webkit-scrollbar {
     width: 10px;
     height: 10px;
@@ -52,7 +52,7 @@
 }
 
 
-/*body*/
+/*BODY*/
 body{
     font-family: 'Baskervville', serif;
     font-size: 16px;
@@ -103,7 +103,7 @@ body{
 
 
 
-/*header*/
+/*HEADER*/
 .menu{
     display: flex;
     justify-content: space-between;
@@ -168,7 +168,7 @@ body{
 
 
 
-/*burger menu*/
+/*BURGER MENU*/
 .menu__button{
     width: 40px;
     height: 29px;
@@ -204,7 +204,9 @@ body{
     text-indent: 100%;
 }
 
-/*typo / hiérarchies*/
+
+
+/*TYPO & HIERARCHIES*/
 .title{
     text-transform: uppercase;
     color: var(--c-darkBlue);
@@ -237,6 +239,7 @@ body{
     color: var(--c-bg);
     font-size: 20px;
 }
+
 .title--light{
     font-size: 20px;
 }
@@ -257,7 +260,7 @@ p{
 
 
 
-/*footer*/
+/*FOOTER*/
 .menu2{
     color: var(--c-black);
     display: flex;
@@ -290,7 +293,8 @@ p{
 }
 
 
-/*sections*/
+/*SECTIONS*/
+/*page d'accueil - intro*/
 .mainContainer__section1{
     margin-top: 64px;
 
@@ -301,10 +305,16 @@ p{
         margin: auto;
         margin-bottom: 32px;
     }
+}
+
+.mainContainer__video{
+    margin-top: 64px;
+    margin-bottom: 64px;
+    margin-left: 32px;
+    margin-right: 32px;
 
     .image--futureVideo{
-        margin-top: 64px;
-        margin-bottom: 64px;
+        margin: auto;
     }
 }
 
@@ -319,6 +329,7 @@ p{
     top: 70px;
     margin-left: -32px;
     z-index: -4;
+    opacity: 90%;
 }
 
 .mainContainer__section2, .mainContainer__section3, .mainContainer__section4{
@@ -340,6 +351,8 @@ p{
     }
 }
 
+
+/*page d'accueil - description du produit avec les 3 photos*/
 .mainContainer__section2{
     background-color: #e8f4fc;
 
@@ -369,6 +382,7 @@ p{
     }
 }
 
+/*page d'accueil - avis des utilisateurs*/
 .mainContainer__section5{
     padding-top: 144px;
 
@@ -385,6 +399,7 @@ p{
         padding-bottom: 56px;
         margin-bottom: 16px;
         text-align: center;
+        background-color: var(--c-bg);
     
         .title--little{
             margin-bottom: 0;
@@ -403,9 +418,10 @@ p{
     }
 }
 
-
+/*page d'accueil - ce que le produit permettra*/
 .mainContainer__section6{
     margin-bottom: 64px;
+    padding-top: 144px;
 
     .title--medium{
         margin-bottom: 0;
@@ -415,7 +431,7 @@ p{
     }
 
     .title--big{
-        display: none;
+        text-align: center;
     }
 
     .image{
@@ -442,24 +458,27 @@ p{
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        border-radius: 110px;
+        border-radius: 183px;
 
         margin-bottom: 16px;
         margin-right: auto;
         margin-left: auto;
 
         height: 337px;
-        width: 313px;
+        width: 337px;
 
-        p{
-            margin-left: 20px;
-            margin-right: 20px;
+        .p--big{
+            margin-left: 32px;
+            margin-right: 32px;
             margin-bottom: 0;
+            margin-top: 8.5px;
+            text-align: center;
         }
+
     }
 }
 
-
+/*page d'accueil - profitez-en vous aussi*/
 .mainContainer__section7{
     text-align: center;
     background-color: var(--c-pink);
@@ -475,6 +494,7 @@ p{
     }
 }
 
+/*page boutique*/
 .mainContainer__sectionproduit{
     margin-top: 64px;
 
@@ -484,6 +504,7 @@ p{
     margin-top: 79px;
 }
 
+/*page infos*/
 .mainContainer__sectioncreateurs{
     margin-top: 64px;
     display: flex;
@@ -491,6 +512,7 @@ p{
     align-items: center;
 }
 
+/*page infos*/
 .mainContainer__sectionfaq{
     margin-top: 64px; 
 
@@ -501,6 +523,10 @@ p{
         cursor: pointer;
         position: relative;
         padding-left: 30px;
+
+        border-style: solid;
+        border-color: var(--c-darkBlue);
+        border-radius: 13px;
         
     }
     summary::before {
@@ -520,6 +546,7 @@ p{
 
 }
 
+
 /*IMAGE*/
 .image--createurs{
     width: 300px;
@@ -527,9 +554,41 @@ p{
 }
 
 
-/*tablette*/
+
+
+/*RESPONSIVE*/
+@media(min-width: 470px){
+    /*page d'accueil - avis des utilisateurs*/
+    .mainContainer__section5{
+        &--user1, &--user2, &--user3{
+            margin-bottom: 32px;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 605px;
+        }
+    }
+}
+
+@media(min-width: 490px){
+    /*FOOTER*/
+    .menu2{
+        margin-top: 144px;
+
+        &__section1{
+            display: contents;
+        }
+
+        max-width: 1150px;
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+}
+
+
+/******TABLETTE*******/
 @media(min-width: 768px){
-    /*header*/
+    /*HEADER*/
     .menu{
         display: flex;
         justify-content: space-between;
@@ -598,7 +657,8 @@ p{
         margin-left: 0;
     }
 
-    /*footer*/
+
+    /*FOOTER*/
     .menu2{
         display: flex;
 
@@ -609,7 +669,7 @@ p{
     }
 
 
-    /*typo / hiérarchies*/
+    /*TYPO & HIERARCHIES*/
     .title--big{
         font-size: 39px;
     }
@@ -618,23 +678,35 @@ p{
         font-size: 29px;
     }
 
+    .title{
+        margin-bottom: 48px;
+    }
 
 
-
-    /*sections*/
+    /*SECTIONS*/
+    /*page d'accueil - avis des utilisateurs*/
     .mainContainer__section5{
+        margin: auto;
+        text-align: center;
+
+
         &--user1, &--user2, &--user3{
             max-width: 230px;
             margin: auto;
             margin-bottom: 32px;
-            padding-bottom: 16px;
+            padding-bottom: 32px;
+            padding-top: 32px;
 
             display: inline-flex;
             flex-direction: column;
-        }
 
-        .p{
-            height: 192px;
+            .p{
+                height: 196px;
+            }
+
+            .title{
+                margin-bottom: 16px;
+            }
         }
 
         .image{
@@ -643,25 +715,34 @@ p{
         }
     }
 
-    .mainContainer__section6{
-        padding-top: 144px;
 
-        .title--big{
-            display: block;
-            text-align: center;
-        }
+    /*page d'accueil - ce que le produit permettra*/
+    .mainContainer__section6{
+        margin: auto;
+        text-align: center;
 
         &--box1, &--box2, &--box3{
-            width: 100%;
-            
-            p{
-                margin-top: 32px;
-                margin-left: 32px;
-                margin-right: 32px;
+            max-width: 230px;
+            margin: auto;
+            margin-bottom: 32px;
+            padding-bottom: 32px;
+            padding-top: 32px;
+
+            display: inline-flex;
+            flex-direction: column;
+            justify-content: flex-start;
+
+            .image{
+                margin-top: 16px;
             }
         }
     }
 
+    .mainContainer__section7{
+        margin-top: 64px;
+    }
+
+    /*page boutique*/
     .mainContainer__sectionproduit{
         display: flex;
         align-items: center;
@@ -674,6 +755,7 @@ p{
     
     }
     
+    /*page boutique*/
     .mainContainer__sectionsable{
         display: flex;
         align-items: center;
@@ -684,35 +766,341 @@ p{
             padding-left: 128px;
         }
     }
-
-
 }
 
 
-/*desktop*/
+@media(min-width: 889px){
+    /*page d'accueil - avis des utilisateurs*/
+    .mainContainer__section5{
+        &--user1, &--user2, &--user3{
+            max-width: 240px;
+            margin-left: 16px;
+            margin-right: 16px;
+        }
+
+
+        .p{
+            height: 195px;
+        }
+    }
+
+    /*page d'accueil - ce que le produit permettra*/
+    .mainContainer__section6{
+        margin: auto;
+        text-align: center;
+    
+        &--box1, &--box2, &--box3{
+            max-width: 230px;
+            margin: auto;
+            margin-bottom: 32px;
+            padding-bottom: 32px;
+            padding-top: 32px;
+    
+            display: inline-flex;
+            flex-direction: column;
+
+            margin-left: 16px;
+            margin-right: 16px;
+        }
+    }
+}
+
+@media(min-width: 970px){
+    /*page d'accueil - avis des utilisateurs*/
+    .mainContainer__section5{
+        &--user1, &--user2, &--user3{
+            max-width: 260px;
+            margin-left: 16px;
+            margin-right: 16px;
+
+            .p{
+                height: 145px;
+            }
+        }
+    }
+
+    /*page d'accueil - ce que le produit permettra*/
+    .mainContainer__section6{
+        margin: auto;
+        text-align: center;
+    
+        &--box1, &--box2, &--box3{
+            max-width: 260px;
+        }
+    }
+}
+
+
+@media(min-width: 994px){
+    /*page d'accueil - avis des utilisateurs*/
+    .mainContainer__section5{
+        &--user1, &--user2, &--user3{
+            max-width: 275px;
+        }
+    }
+}
+
+@media(min-width: 1030px){
+    /*page d'accueil - ce que le produit permettra*/
+    .mainContainer__section6{
+        &--box1, &--box2, &--box3{
+            width: 300px;
+            height: 330px;
+            border-radius: 183px;
+        }
+    }
+}
+
+@media(min-width: 1174px){
+    /*page d'accueil - avis des utilisateurs*/
+    .mainContainer__section5{
+        background-image: url(../assets/images/vague.svg);
+        background-repeat: no-repeat;
+        background-size: 140%, cover;
+        background-position-y: 260px;
+        background-position-x: center;
+
+
+        margin-left: -32px;
+        margin-right: -32px;
+
+        height: 830px;
+
+        &--user1, &--user2, &--user3{
+            max-width: 337px;
+            width: 337px;
+            height: 380px;
+        }
+    
+    }
+}
+
+
+/******DESKTOP*******/
 @media(min-width: 1280px){
-    /*typo / hiérarchies*/
+
+    /*BODY*/
+    .button{
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+
+
+    /*TYPO & HIERARCHIES*/
     .title--big{
         font-size: 49px;
     }
 
+    .title--big{
+        margin-bottom: 64px;
+    }
 
-}
 
+    /*SECTIONS*/
+    /*page d'accueil - intro*/
+    .mainContainer__section1{
+        display: inline-flex;
+        flex-direction: row-reverse;
+        margin-top: 194px;
+        align-items: center;
 
+        .mainContainer__section1--txt{
+            padding-left: 194px;
+            margin-right: 16px;
 
-//page info
-.spoil{
-    border-style: solid;
-    border-color: var(--c-darkBlue);
-    border-radius: 13px;
-}
+            .title--medium{
+                font-size: 39px;
+                margin-bottom: 16px;
+                max-width: 690px;
+            }
 
-@media(min-width: 490px){
-    /*footer*/
-    .menu2{
-        &__section1{
-            display: contents;
+            .p--button{
+                margin: 0;
+                max-width: 690px;
+            }
         }
+
+        .mainContainer__section1--img{
+            padding-right: 194px;
+        }
+
+        .image--produitBoreal{
+            background-color: #889BD3;
+            width: 444px;
+            height: 514px;
+            margin: auto;
+        }
+    }
+
+    .mainContainer__section1:before{
+        width: 100%;
+        top: 356px;
+        height: 37%;
+    }
+
+    /*page d'accueil - video*/
+    .mainContainer__video{
+        max-width: 865px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 297px;
+        margin-bottom: 297px;
+    }
+
+    /*page d'accueil - description du produit avec les 3 photos*/
+    /*photos 1, 2, 3*/
+    .mainContainer__section2, .mainContainer__section3, .mainContainer__section4{
+        display: flex;
+        align-items: center;
+
+        padding-bottom: 0;
+    }
+
+    .mainContainer__section2--img, .mainContainer__section3--img, .mainContainer__section4--img{
+        width: 560px;
+        height: 965px;
+    }
+
+    .mainContainer__section2--txt, .mainContainer__section3--txt, .mainContainer__section4--txt{
+        justify-content: center;
+        margin: auto;
+        width: 490px;
+
+        .title--big, p{
+            margin: 0;
+            margin-bottom: 16px;
+            padding: 0;
+        }
+    }
+
+    /*photo1*/
+    .mainContainer__section2{
+        .mainContainer__section2--img{
+            .image{
+                object-position: -773px;
+            }
+        }
+    }
+
+    /*photo2*/
+    .mainContainer__section3{
+        flex-direction: row-reverse;
+
+        .mainContainer__section3--img{
+            .image{
+                object-position: -590px;
+            }
+        }
+    }
+
+    /*photo3*/
+    .mainContainer__section4{
+        .mainContainer__section4--img{
+            .image{
+                object-position: -200px;
+            }
+        }
+    }
+
+
+
+    /*page d'accueil - ce que le produit permettra*/
+    .mainContainer__section6{
+        padding-top: 0px;
+        padding-bottom: 128px;
+
+
+        &--box1, &--box2, &--box3{
+            border-radius: 100%;
+    
+            margin-bottom: 16px;
+            margin-right: 8.5px;
+            margin-left: 8.5px;
+
+            max-width: 100%;
+            height: 337px;
+            width: 337px;
+
+            justify-content: center;
+    
+            p{
+                margin-left: 32px;
+                margin-right: 32px;
+                margin-bottom: 0;
+                line-height: 150%;
+            }
+        }
+
+        .title--big{
+            margin-top: 128px;
+        }
+    }
+
+
+    /*page d'accueil - profitez-en vous aussi*/
+    .mainContainer__section7{
+        padding-top: 151px;
+        padding-bottom: 177px;
+
+        .p--button{
+            margin-top: 32px;
+        }
+    }
+}
+
+
+@media(min-width: 1400px){
+    /*page d'accueil - avis des utilisateurs*/
+    .mainContainer__section5{
+        background-size: 100%, cover;
+        background-position-y: 250px;
+
+        height: 710px;
+    }
+}
+
+@media(min-width: 1700px){
+    /*page d'accueil - description du produit avec les 3 photos*/
+    .mainContainer__section2--img, .mainContainer__section3--img, .mainContainer__section4--img{
+        width: 965px;
+        height: 965px;
+    }
+
+    /*photo1*/
+    .mainContainer__section2{
+        .mainContainer__section2--img{
+            .image{
+                object-position: -390px;
+            }
+        }
+    }
+
+    /*photo2*/
+    .mainContainer__section3{
+        flex-direction: row-reverse;
+
+        .mainContainer__section3--img{
+            .image{
+                object-position: -390px;
+            }
+        }
+    }
+
+    /*photo3*/
+    .mainContainer__section4{
+        .mainContainer__section4--img{
+            .image{
+                object-position: 0px;
+            }
+        }
+    }
+}
+
+@media(min-width: 2000px){
+    /*page d'accueil - avis des utilisateurs*/
+    .mainContainer__section5{
+        background-size: 100%, cover;
+        background-position-y: calc(100% - 15px);
+        height: 710px;
     }
 }
