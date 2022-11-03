@@ -328,6 +328,7 @@ p{
     position: absolute;
     top: 70px;
     margin-left: -32px;
+    margin-right: -32px;
     z-index: -4;
     opacity: 90%;
 }
@@ -357,9 +358,14 @@ p{
     background-color: #e8f4fc;
 
     .title--big:before{
-        content: "";
+        content: " ";
         background-image: url(../assets/images/01..svg);
-        position: relative;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: bottom;
+        position: absolute;
+        height: 82px;
+        width: 145px;
     }
 }
 
@@ -367,8 +373,14 @@ p{
     background-color: #e8d4e4;
 
     .title--big:before{
-        content: "";
+        content: " ";
         background-image: url(../assets/images/02..svg);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: bottom;
+        position: absolute;
+        height: 82px;
+        width: 145px;
     }
 }
 
@@ -376,9 +388,14 @@ p{
     background-color: #f8f4fc;
 
     .title--big:before{
-        content: "";
-        background-image: url(../assets/images/03..svg); /*REFAIRE*/
+        content: " ";
+        background-image: url(../assets/images/03..svg);
+        background-repeat: no-repeat;
         background-size: 100%;
+        background-position: bottom;
+        position: absolute;
+        height: 82px;
+        width: 145px;
     }
 }
 
@@ -582,6 +599,30 @@ p{
         margin-left: auto;
         margin-right: auto;
 
+    }
+}
+
+@media(min-width: 536px) and (max-width: 767px){ 
+    .mainContainer__section2--txt, .mainContainer__section3--txt, .mainContainer__section4--txt{
+        width: 408px;
+        margin: auto;
+
+        .title--big:before{
+            height: 80px;
+            width: 142px;
+        }
+    }
+}
+
+@media(min-width: 768px) and (max-width: 1279px){ 
+    .mainContainer__section2--txt, .mainContainer__section3--txt, .mainContainer__section4--txt{
+        width: 638px;
+        margin: auto;
+
+        .title--big:before{
+            height: 105px;
+            width: 186px;
+        }
     }
 }
 
@@ -980,6 +1021,11 @@ p{
                 object-position: -773px;
             }
         }
+
+        .title--big:before{
+            height: 140px;
+            width: 248px;
+        }
     }
 
     /*photo2*/
@@ -991,6 +1037,11 @@ p{
                 object-position: -590px;
             }
         }
+
+        .title--big:before{
+            height: 140px;
+            width: 248px;
+        }
     }
 
     /*photo3*/
@@ -999,6 +1050,11 @@ p{
             .image{
                 object-position: -200px;
             }
+        }
+
+        .title--big:before{
+            height: 140px;
+            width: 248px;
         }
     }
 
