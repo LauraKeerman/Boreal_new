@@ -258,6 +258,10 @@ p{
     font-weight: 500;
 }
 
+.p--bold{
+    font-size: 25px;
+}
+
 
 
 /*FOOTER*/
@@ -527,6 +531,12 @@ p{
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    .title--light{
+        text-align: center;
+        margin-bottom: 40px;
+        margin-top: 20px;
+    }
 }
 
 /*page infos*/
@@ -557,12 +567,22 @@ p{
         margin-right: 10px;
     }
 
-    .p--bold{
-        font-size: 25px;
-    }
-
 }
 
+.mainContainer__sectionquest{
+    .p--encadre{
+        border-style: solid;
+        border-color: var(--c-darkBlue);
+        padding-left: 15px;
+        padding-top: 26px;
+        padding-bottom: 26px;
+        border-radius: 13px;
+    }
+
+    .p-heightgrand{
+        height: 200px;
+    }
+}
 
 /*IMAGE*/
 .image--createurs{
@@ -1103,9 +1123,41 @@ p{
         }
     }
 
-    .mainContainer__sectionfaq, .mainContainer__sectioncreateurs {
+    .mainContainer__sectionfaq, .mainContainer__sectioncreateurs, .mainContainer__sectionproduit, .mainContainer__sectionsable, .mainContainer__sectionquest {
         margin-left: 168px;
-        margin-right: 168px;
+        margin-right: 168px;  
+    }
+
+    .mainContainer__sectionproduit, .mainContainer__sectionsable{
+        .text{
+            max-width: 500px;
+        }
+    }
+
+    .mainContainer__sectioncreateurs--ordi {
+        display: flex;
+
+        .image--createurs{
+            height: 248px;
+            width: 248px;
+        }
+        .createur1, .createur2, .createur3, .createur4{
+            margin-left: 8px;
+            margin-right: 8px;
+        }
+    }
+
+    .sectionquest{
+
+        display: flex;
+        justify-content: space-between;
+
+        .p--encadre{
+            width: 700px;
+            max-width: 500px;
+            margin-left: 8px;
+            margin-right: 8px;
+        }
     }
 }
 
@@ -1153,6 +1205,18 @@ p{
             .image{
                 object-position: 0px;
             }
+        }
+    }
+
+    .sectionquest{
+
+        display: flex;
+        justify-content: space-between;
+        
+        .p--encadre{
+            max-width: 700px;
+            margin-left: 8px;
+            margin-right: 8px;
         }
     }
 }
