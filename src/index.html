@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -63,7 +62,16 @@
     <!--intro-->
     <section class="mainContainer__section1">
       <section class="mainContainer__section1--img">
-        <div class="image image--produitBoreal"></div>
+        <div class="image--produitBoreal">
+          <img 
+          class="image--produitBoreal" 
+          src="assets/images/machine.jpg" 
+          srcset="assets/images/machine@2x.jpg" 2x
+          alt="image de Boreal"
+          loading="lazy" 
+          decoding="async">
+        </div>
+
       </section>
 
       <section class="mainContainer__section1--txt">
@@ -82,7 +90,9 @@
 
     <!--video-->
     <section class="mainContainer__video">
-      <img class="image image--futureVideo" src="assets/images/future-video.jpg" alt="vidéo du produit Boreal">
+      <iframe class="video" src="https://www.youtube.com/embed/DFZkii_uuTE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+      <!--<img class="image image--futureVideo" src="assets/images/future-video.jpg" alt="vidéo du produit Boreal">-->
     </section>
 
 
@@ -91,7 +101,13 @@
     <!--photo1-->
     <section class="mainContainer__section2">
       <section class="mainContainer__section2--img">
-        <img class="image" src="assets/images/photo1.jpg" alt="image">
+        <img 
+        class="image" 
+        src="assets/images/photo1_corr@1x.jpg" 
+        srcset="assets/images/photo1_corr@2x.jpg" 2x
+        alt="image"
+        loading="lazy" 
+        decoding="async">
       </section>
 
       <section class="mainContainer__section2--txt">
@@ -103,7 +119,13 @@
     <!--photo2-->
     <section class="mainContainer__section3">
       <section class="mainContainer__section3--img">
-        <img class="image" src="assets/images/photo2.jpg" alt="image">
+        <img 
+        class="image" 
+        src="assets/images/photo2_corr@1x.jpg" 
+        srcset="assets/images/photo2_corr@2x.jpg" 2x
+        alt="image"
+        loading="lazy" 
+        decoding="async">      
       </section>
 
       <section class="mainContainer__section3--txt">
@@ -115,7 +137,13 @@
     <!--photo3-->
     <section class="mainContainer__section4">
       <section class="mainContainer__section4--img">
-        <img class="image" src="assets/images/photo3.jpg" alt="image">
+        <img 
+        class="image" 
+        src="assets/images/photo3_corr@1x.jpg" 
+        srcset="assets/images/photo3_corr@2x.jpg" 2x
+        alt="image"
+        loading="lazy" 
+        decoding="async">    
       </section>
 
       <section class="mainContainer__section4--txt">
@@ -190,19 +218,19 @@
       <section class="menu2__section1--box1">
         <h2 class="title">boreal</h2>
         <ul>
-          <li> <a href="index.html"> Accueil</a></li>
-          <li> <a href="boutique.html"> Boutique</a></li>
-          <li> <a href="infos.html"> Infos</a></li>
+          <li> <a class="link" href="index.html"> Accueil</a></li>
+          <li> <a class="link" href="boutique.html"> Boutique</a></li>
+          <li> <a class="link" href="infos.html"> Infos</a></li>
         </ul>
       </section>
 
       <section class="menu2__section1--box2">
         <h2 class="title">l'équipe</h2>
         <ul>
-          <li> <a href="http://nell-maissin.be/" target="_blank"> Nell <span>Maissin</span></a></li>
-          <li> <a href="https://laurakeerman.be/" target="_blank"> Laura <span>Keerman</span></a></li>
-          <li> <a href="https://julie-corbeel.be/" target="_blank"> Julie <span>Corbeel</span></a></li>
-          <li> <a href="https://melvyn-ulens.be/" target="_blank"> Melvyn<span>Ulens</span></a></li>
+          <li> <a class="link" href="http://nell-maissin.be/" target="_blank"> Nell <span>Maissin</span></a></li>
+          <li> <a class="link" href="https://laurakeerman.be/" target="_blank"> Laura <span>Keerman</span></a></li>
+          <li> <a class="link" href="https://julie-corbeel.be/" target="_blank"> Julie <span>Corbeel</span></a></li>
+          <li> <a class="link" href="https://melvyn-ulens.be/" target="_blank"> Melvyn <span>Ulens</span></a></li>
         </ul>
       </section>
     </section>
@@ -210,7 +238,14 @@
     <section class="menu2__section2">
       <h2 class="title">infos</h2>
       <ul>
-        <li><span>heaj — dwt</span></li>
+        <li>
+          <span> 
+            <a class="link" href="https://www.heaj.be/fr/">heaj</a>
+             — 
+            <a class="link" href="http://dwm.re/">dwt</a> 
+          </span>
+        </li>
+
         <li>Copyright @ 2022</li>
       </ul>
     </section>
