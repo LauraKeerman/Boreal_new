@@ -541,7 +541,7 @@ p{
 
 /*page infos*/
 .mainContainer__sectionfaq{
-    margin-top: 64px; 
+    margin-top: 71px; 
 
     .spoil{
         margin-top: 16px;
@@ -567,9 +567,16 @@ p{
         margin-right: 10px;
     }
 
+    .text{
+        margin-top: 32px;
+    }
+
 }
 
 .mainContainer__sectionquest{
+
+    margin-top: 71px; 
+
     .p--encadre{
         border-style: solid;
         border-color: var(--c-darkBlue);
@@ -1126,6 +1133,7 @@ p{
     .mainContainer__sectionfaq, .mainContainer__sectioncreateurs, .mainContainer__sectionproduit, .mainContainer__sectionsable, .mainContainer__sectionquest {
         margin-left: 168px;
         margin-right: 168px;  
+        margin-top: 128px;
     }
 
     .mainContainer__sectionproduit, .mainContainer__sectionsable{
