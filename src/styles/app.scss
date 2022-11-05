@@ -519,6 +519,12 @@ p{
 .mainContainer__sectionproduit{
     margin-top: 64px;
 
+    .img--produit{
+        width: 308px;
+        height: 359px;
+        object-fit: cover;
+    }
+
 }
 
 .mainContainer__sectionsable{
@@ -815,6 +821,10 @@ p{
         display: flex;
         align-items: center;
         margin-top: 128px;
+
+        .img--produit{
+            width: 423px;
+        }
         
 
         .sectionproduit{
