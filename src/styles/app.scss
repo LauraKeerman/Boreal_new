@@ -680,18 +680,36 @@ p{
 .mainContainer__sectionquest{
 
     margin-top: 71px; 
+    
 
     .p--encadre{
         border-style: solid;
         border-color: var(--c-darkBlue);
         padding-left: 15px;
+        padding-right: 15px;
         padding-top: 26px;
         padding-bottom: 26px;
         border-radius: 13px;
+        font-family: 'Baskervville';
+        font-size: 25px ;
+        margin-bottom: 32px;
+        
     }
 
     .p-heightgrand{
         height: 200px;
+        display: grid;
+        width: 100%;
+    
+
+    }
+    .sectionquest{
+        margin-bottom: 32px;
+        display: grid;
+    }
+    
+    .button{
+        font-family: 'Montserrat';
     }
 }
 
@@ -1033,18 +1051,29 @@ p{
         }
     }
 
-    .sectionquest{
+    .mainContainer__sectionquest{
+        .sectionquest{
 
-        display: flex;
-        justify-content: space-between;
-
-        .p--encadre{
-            width: 700px;
-            max-width: 600px;
-            margin-left: 8px;
-            margin-right: 8px;
+            display: flex;
+            justify-content: space-between;
+    
+            .p--encadre{
+                display: inline;
+                width: 700px;
+                max-width: 600px;
+                margin-left: 8px;
+                margin-right: 8px;
+                
+            }
+    
+        }
+        .p-heightgrand{
+            display: grid;
+            width: 100%;
         }
     }
+
+
 
     
 
