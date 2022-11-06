@@ -318,6 +318,12 @@ p{
             margin: auto;
         }
     }
+
+    &--txt{
+        .p--button{
+            padding-top: 32px;
+        }
+    }
 }
 
 .mainContainer__video{
